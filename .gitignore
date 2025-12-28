@@ -205,3 +205,6 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+# Large model weights
+Conan-embedding-v1/*.bin
+Conan-embedding-v1/*.safetensors
