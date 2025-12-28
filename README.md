@@ -63,6 +63,16 @@ There are hard-coded values in the code; you must modify them for your environme
   - `my_milvus.py`: `generate_vector_from_text()` depends on a local embedding model and import paths
   - Replace the model path mapping/import paths, or the entire generation logic, with your own embedding implementation
 
+#### Download embedding model (required)
+
+This repo **does not** bundle the embedding model weights (they are large files and have been removed from the repository history).
+
+- Please download **Conan-embedding-v1** from Hugging Face: [TencentBAC/Conan-embedding-v1](https://huggingface.co/TencentBAC/Conan-embedding-v1)
+- After downloading, place the model directory at:
+  - `./Conan-embedding-v1`
+
+> Tip: Make sure the vector dimension produced by your embedding model matches the Milvus collection vector field dimension.
+
 ### 4) Start the service
 
 ```bash
